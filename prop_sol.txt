@@ -1,0 +1,14 @@
+we have 5 philos
+we have 5 forks
+the philo can eat and think
+to eat must have two forks
+
+-->resource Hieararchy solution:
+
+think until the small number fork is available --> pick it up
+think until the large number fork is available --> pick it up
+eat for a fixed amount of time 
+put the small number fork down
+put the large number fork down
+repeat ...
+
