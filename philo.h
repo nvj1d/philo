@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:58:16 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/02 16:36:50 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/02 20:05:44 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,22 @@ typedef struct s_philosopher
 
 typedef struct s_data{
 	int	nb_philosophers;
+	int time_to_die;
+	int time_to_eat;
+	int	time_to_sleep;
+	int	number_of_times;
+	int die;
+	int	eat_or_not;
+	long long	beginning_time;
+	pthread_mutex_t	*forks;
+	pthread_mutex_t	eating;
+	pthread_mutex_t	printing;
+	t_philosopher	*philo;
 }	t_data;
+
+// ft_isdigit
+// ft_atoi
+// ft_checkargument
 #endif
 
 // eat xor sleep xor think
