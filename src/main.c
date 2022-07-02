@@ -6,11 +6,11 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:38:38 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/02 15:10:44 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/02 15:18:02 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "../philo.h"
 
 int	main(int ac, char **av)
 {

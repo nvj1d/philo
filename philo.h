@@ -6,12 +6,15 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:58:16 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/02 15:11:14 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/02 15:17:36 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H
+
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct s_philosopher
 {
