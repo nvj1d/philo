@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 14:02:15 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 15:39:30 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 15:54:08 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int	ft_init(t_data *data, char **av, int ac)
 	data->time_to_sleep = ft_atoi(av[4]);
 	if (ac == 6)
 	{
-		data->number_of_times = ft_atoi(av[5]);
-		if (data->number_of_times == 0)
+		data->nb_eat_times = ft_atoi(av[5]);
+		if (data->nb_eat_times == 0)
 			return (1);
 	}
 	data->die = 0;

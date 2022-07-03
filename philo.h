@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:58:16 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 15:43:32 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 15:54:08 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_data{
 	int				time_to_die;
 	int				time_to_eat;
 	int				time_to_sleep;
-	int				number_of_times;
+	int				nb_eat_times;
 	int				die;
 	int				eat_or_not;
 	long long		beginning_time;
