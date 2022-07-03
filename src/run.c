@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:24:14 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 20:35:17 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 20:49:36 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	ft_run(t_data *data, t_philosopher *philo)
 	while (i < data->nb_philosophers)
 	{
 		data->philo[i].check_die_time = ft_time();
-		if (pthred_create(&data->philo[i].thread_id, NULL \
+		if (pthread_create(&data->philo[i].thread_id, NULL \
 				, ft_routine, (void *)&(philo[i])))
 			printf("thread not created");
 		i++;

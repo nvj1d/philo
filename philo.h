@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:58:16 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 15:54:08 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 20:48:53 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,20 @@ int			ft_init_philo(t_data *data);
 static int	ft_check_positive(t_data *data);
 int			ft_init(t_data *data, char **av, int ac);
 
-//free
+//free:
 void		ft_free(t_data *data);
+
+//routine:
+void		ft_print(t_data *data, char *str, int index);
+void		ft_start_eating(t_data *data, t_philosopher *philo);
+int			ft_take_fork(t_data *data, t_philosopher *philo);
+void		*ft_routine(void *philo);
+
+//run:
+void		ft_check_eat(t_data *data, t_philosopher *philo);
+void		ft_death(t_data *data, t_philosopher *philo);
+void		ft_end(t_data *data, t_philosopher *philo);
+int			ft_run(t_data *data, t_philosopher *philo);
+
+
 #endif

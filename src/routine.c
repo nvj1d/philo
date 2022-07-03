@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:24:09 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 20:34:43 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 20:37:45 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_print(t_data *data, char *str, int index)
 	pthread_mutex_unlock(&(data->printing));
 }
 
-void	ft_start_earing(t_data *data, t_philosopher *philo)
+void	ft_start_eating(t_data *data, t_philosopher *philo)
 {
 	long	start;
 
