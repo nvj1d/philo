@@ -6,11 +6,11 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 14:07:33 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 14:09:51 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 14:29:26 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../philo.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

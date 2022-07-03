@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:58:16 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 14:22:46 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 15:43:32 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 # include <pthread.h>
+# include <sys/time.h>
 
 typedef struct s_philosopher
 {
@@ -38,10 +40,10 @@ typedef struct s_data{
 	int				die;
 	int				eat_or_not;
 	long long		beginning_time;
-	pthread_mutex_t	*forks;
-	pthread_mutex_t	eating;
-	pthread_mutex_t	printing;
-	t_philosopher	*philo;
+	pthread_mutex_t	*forks;//
+	pthread_mutex_t	eating;//
+	pthread_mutex_t	printing;//
+	t_philosopher	*philo;//
 }	t_data;
 
 //utils:
@@ -52,14 +54,14 @@ void		ft_erreur(int a);
 int			ft_atoi(const char *str);
 int			ft_isdigit(int c);
 int			ft_check_digits(char *str);
-int			ft_check_argument(int argc, char **argv);
+int			ft_args_digits(int argc, char **argv);
 long long	ft_time(void);
 
 //init:
-int			ft_initialise_mutex(t_data *data);
-int			ft_initialise_philo(t_data *data);
+int			ft_init_mutex(t_data *data);
+int			ft_init_philo(t_data *data);
 static int	ft_check_positive(t_data *data);
-int			ft_initialise(t_data *data, char **av, int ac);
+int			ft_init(t_data *data, char **av, int ac);
 
 //free
 void		ft_free(t_data *data);

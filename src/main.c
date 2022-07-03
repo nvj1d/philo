@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:38:38 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 14:19:44 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 15:51:28 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ int	main(int ac, char **av)
 		data = (t_data *)malloc(sizeof(t_data));
 		if (!data)
 			return (1);
-		if (ft_check_argument(ac, av) == 1 || ft_initialise(data, av, ac))
+		if (ft_args_digits(ac, av) == 1 || ft_init(data, av, ac) == 1)
 		{
 			ft_free(data);
-			printf("Error!\n");
+			printf("please check the values and try again!\n");
 			return (1);
 		}
-		ft_run(data, data->philo);
-		ft_free(data);
+	// 	// ft_run(data, data->philo);
+	// 	// ft_free(data);
 	}
 	else
 	{
-		printf("the syntax is: NF ttd tte tts [Ntfe]");
+		printf("the syntax is: NF ttd tte tts [Ntfe]\n");
 	}
 }

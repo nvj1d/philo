@@ -6,13 +6,13 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 14:02:15 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 14:23:48 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 15:39:30 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../philo.h"
 
-int	ft_initialise_mutex(t_data *data)
+int	ft_init_mutex(t_data *data)
 {
 	int	i;
 
@@ -27,16 +27,18 @@ int	ft_initialise_mutex(t_data *data)
 	while (i < data->nb_philosophers)
 	{
 		if (pthread_mutex_init(&(data->forks[i]), NULL))
+			return (1);
 		i++;
 	}
 	return (0);
 }
 
-int	ft_initialise_philo(t_data *data)
+int	ft_init_philo(t_data *data)
 {
 	int	i;
 
 	i = 0;
+	data->philo = malloc(sizeof(t_data) * data->nb_philosophers);
 	if (data->philo == NULL)
 		return (1);
 	while (i < data->nb_philosophers)
@@ -60,7 +62,7 @@ static int	ft_check_positive(t_data *data)
 	return (0);
 }
 
-int	ft_initialise(t_data *data, char **av, int ac)
+int	ft_init(t_data *data, char **av, int ac)
 {
 	data->nb_philosophers = ft_atoi(av[1]);
 	data->time_to_die = ft_atoi(av[2]);
@@ -77,7 +79,7 @@ int	ft_initialise(t_data *data, char **av, int ac)
 	data->beginning_time = 0;
 	if (ft_check_positive(data))
 		return (1);
-	if (ft_initialise_mutex(data) || ft_initialise_philo(data))
+	if (ft_init_mutex(data) || ft_init_philo(data))
 		return (1);
 	return (0);
 }
