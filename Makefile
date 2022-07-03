@@ -6,7 +6,7 @@
 #    By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/02 15:10:33 by mnajid            #+#    #+#              #
-#    Updated: 2022/07/02 15:10:54 by mnajid           ###   ########.fr        #
+#    Updated: 2022/07/03 14:26:13 by mnajid           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,12 @@ CC = gcc
 
 flags = -Wall -Werror -Wextra
 
-srcs = ./src/main.c
+srcs = ./src/main.c \
+		./src/ft_free.c \
+		./src/init.c \
+		./src/routrine.c \
+		./src/utils.c \
+		./src/utils2.c
 
 objs = $(srcs:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:58:16 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 14:17:24 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 14:22:46 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_philosopher
 	int				right_fork;
 	int				left_fork;
 	int				nb_eat;
+	long long		check_die_time;
 	struct s_data	*data;
 }	t_philosopher;
 
