@@ -63,7 +63,8 @@ void *ft_routine(void *philo)
         ft_print(data, "sleeping ", copy->rang);
         start = ft_time();
         while(ft_time() - start < data->time_to_sleep)
-        
+            usleep(100);
+        ft_print(data, "thinking", copy->rang);
     }
-    
+    return((void *)0);
 }
