@@ -1,7 +1,21 @@
-void ft_free(t_data *data)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/03 14:06:41 by mnajid            #+#    #+#             */
+/*   Updated: 2022/07/03 14:07:27 by mnajid           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../philo.h"
+
+void	ft_free(t_data *data)
 {
-    if (!data->philo)
-        free(data->philo)
-    if(!data->forks)
-        free(data->forks)
+	if (!data->philo)
+		free(data->philo);
+	if (!data->forks)
+		free(data->forks);
 }

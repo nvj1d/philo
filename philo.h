@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:58:16 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/02 20:05:44 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/03 14:17:24 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,37 @@ typedef struct s_philosopher
 }	t_philosopher;
 
 typedef struct s_data{
-	int	nb_philosophers;
-	int time_to_die;
-	int time_to_eat;
-	int	time_to_sleep;
-	int	number_of_times;
-	int die;
-	int	eat_or_not;
-	long long	beginning_time;
+	int				nb_philosophers;
+	int				time_to_die;
+	int				time_to_eat;
+	int				time_to_sleep;
+	int				number_of_times;
+	int				die;
+	int				eat_or_not;
+	long long		beginning_time;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	eating;
 	pthread_mutex_t	printing;
 	t_philosopher	*philo;
 }	t_data;
 
-// ft_isdigit
-// ft_atoi
-// ft_checkargument
-#endif
+//utils:
+void		ft_putnbr_fd(int n, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putchar_fd(char c, int fd);
+void		ft_erreur(int a);
+int			ft_atoi(const char *str);
+int			ft_isdigit(int c);
+int			ft_check_digits(char *str);
+int			ft_check_argument(int argc, char **argv);
+long long	ft_time(void);
 
-// eat xor sleep xor think
-//forks == philosophers
-// to eat == you needs two forks right and left
-// finish eating --> put forks --> start sleeping --> when awake start thinking again ---> when die stop!
-// pilo--> thread 
-// protect the fork state with a mutex
+//init:
+int			ft_initialise_mutex(t_data *data);
+int			ft_initialise_philo(t_data *data);
+static int	ft_check_positive(t_data *data);
+int			ft_initialise(t_data *data, char **av, int ac);
+
+//free
+void		ft_free(t_data *data);
+#endif
