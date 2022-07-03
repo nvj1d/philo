@@ -16,7 +16,18 @@ int	main(int ac, char **av)
 {
 	if (ac ==  5 || ac == 6)
 	{
-		//should work
+		data = (t_data *)malloc(sizeof(t_data));
+		if (!data)
+			return(1);
+		if (ft_check_argument(ac, av) == 1 \
+				|| ft_initialise(data, av, ac))
+				{
+					ft_free(data);
+					printf("Error!\n");
+					return(1);
+				}
+		ft_run(dat, data->philo);
+		ft_free(data);
 	}
 	else
 	{
