@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:38:38 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 16:05:43 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/04 12:13:53 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	main(int ac, char **av)
 			printf("please check the values and try again!\n");
 			return (1);
 		}
-	// 	// ft_run(data, data->philo);
-	// 	// ft_free(data);
+		ft_run(data, data->philo);
+		ft_free(data);
 	}
 	else
 	{

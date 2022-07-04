@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:24:09 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 20:37:45 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/04 12:38:28 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,8 @@ void	ft_print(t_data *data, char *str, int index)
 	pthread_mutex_lock(&(data->printing));
 	if (!data->die)
 	{
-		ft_putnbr_fd(ft_time() - data->beginning_time, 1);
-		ft_putchar_fd('\t', 1);
-		ft_putnbr_fd(index + 1, 1);
-		ft_putchar_fd('\t', 1);
-		ft_putstr_fd(str, 1);
-		ft_putchar_fd('\n', 1);
+		printf("%lld \t %d \t %s \n", \
+			ft_time() - data->beginning_time, index + 1, str);
 	}
 	pthread_mutex_unlock(&(data->printing));
 }
