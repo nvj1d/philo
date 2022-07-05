@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:24:14 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 20:49:36 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/05 14:03:11 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ft_end(t_data *data, t_philosopher *philo)
 	int	i;
 
 	i = 0;
-	while (i > data->nb_philosophers)
+	while (i < data->nb_philosophers)
 		pthread_mutex_destroy(&(data->forks[i++]));
 	pthread_mutex_destroy(&(data->eating));
 	pthread_mutex_destroy(&(data->printing));

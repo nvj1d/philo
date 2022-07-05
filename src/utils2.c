@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 14:01:49 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 14:46:12 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/05 13:49:59 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,16 +65,16 @@ int	ft_check_digits(char *str)
 	return (1);
 }
 
-int	ft_args_digits(int argc, char **argv)
+int	ft_args_digits(int ac, char **av)
 {
 	int	i;
 
 	i = 1;
-	if (argc != 5 && argc != 6)
+	if (ac != 5 && ac != 6)
 		return (1);
-	while (argv[i] != NULL)
+	while (av[i] != NULL)
 	{
-		if (!ft_check_digits(argv[i]))
+		if (!ft_check_digits(av[i]))
 			return (1);
 		i++;
 	}

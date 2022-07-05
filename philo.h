@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:58:16 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/03 20:48:53 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/05 14:05:32 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,13 @@ typedef struct s_data{
 	int				die;
 	int				eat_or_not;
 	long long		beginning_time;
-	pthread_mutex_t	*forks;//
-	pthread_mutex_t	eating;//
-	pthread_mutex_t	printing;//
-	t_philosopher	*philo;//
+	pthread_mutex_t	*forks;
+	pthread_mutex_t	eating;
+	pthread_mutex_t	printing;
+	t_philosopher	*philo;
 }	t_data;
 
 //utils:
-void		ft_putnbr_fd(int n, int fd);
-void		ft_putstr_fd(char *s, int fd);
-void		ft_putchar_fd(char c, int fd);
 void		ft_erreur(int a);
 int			ft_atoi(const char *str);
 int			ft_isdigit(int c);
@@ -77,6 +74,5 @@ void		ft_check_eat(t_data *data, t_philosopher *philo);
 void		ft_death(t_data *data, t_philosopher *philo);
 void		ft_end(t_data *data, t_philosopher *philo);
 int			ft_run(t_data *data, t_philosopher *philo);
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mnajid <mnajid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 14:02:15 by mnajid            #+#    #+#             */
-/*   Updated: 2022/07/04 12:13:16 by mnajid           ###   ########.fr       */
+/*   Updated: 2022/07/05 13:33:16 by mnajid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	ft_init(t_data *data, char **av, int ac)
 	if (ac == 6)
 	{
 		data->nb_eat_times = ft_atoi(av[5]);
-		if (data->nb_eat_times == 0)
+		if (data->nb_eat_times <= 0)
 			return (1);
 	}
 	data->die = 0;
